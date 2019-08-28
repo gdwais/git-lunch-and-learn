@@ -3,7 +3,9 @@ const app = express();
 const pkg = require("./package.json");
 
 app.get('/ping', (req, res) => {
-
+    res.json({
+        version: pkg.version
+    });
 });
 
 app.listen(3000, () => {
